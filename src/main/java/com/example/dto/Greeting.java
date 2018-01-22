@@ -1,5 +1,7 @@
 package com.example.dto;
 
+import javax.validation.constraints.NotNull;
+
 public class Greeting {
 
 	private long id;
@@ -8,10 +10,12 @@ public class Greeting {
 		this.id = id;
 	}
 
+	
 	public void setContent(String content) {
 		this.content = content;
 	}
 
+	@NotNull
 	private String content;
 
 	public Greeting(long id, String content) {
@@ -28,6 +32,7 @@ public class Greeting {
 		return id;
 	}
 
+	
 	public String getContent() {
 		return content;
 	}

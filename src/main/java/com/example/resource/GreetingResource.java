@@ -1,5 +1,7 @@
 package com.example.resource;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -24,7 +26,7 @@ public class GreetingResource {
 	}
 	
 	@RequestMapping(method = RequestMethod.POST)
-	public Greeting addGreeting(@RequestBody Greeting greeting) {
+	public Greeting addGreeting(@Valid @RequestBody Greeting greeting) {
 		return greetingService.saveGreeting(greeting);
 	}
 	
