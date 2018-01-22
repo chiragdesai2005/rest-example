@@ -1,6 +1,7 @@
 package com.example.dto;
 
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 public class Greeting {
 
@@ -16,6 +17,7 @@ public class Greeting {
 	}
 
 	@NotNull
+	@Size(min=5,max=200)
 	private String content;
 
 	public Greeting(long id, String content) {
